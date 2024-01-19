@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Webpage</title>
+</head>
+<body>
+Welcome to the text analyzer. Please enter your text to be analyzed below.
+    <form action="/analyze" method="post"> {%csrf_token%}
+        <textarea name='text' style="width: 470px; height: 258px;"></textarea><br>
+        <input type="checkbox" name="removepunc">Remove Punctuation</input><br>
+        <input type="checkbox" name="capitalizeFirst">UPPERCASE</input><br>
+        <input type="checkbox" name="newlineremover">New line Remover</input><br>
+        <input type="checkbox" name="spaceremover">Extra Space Remover</input><br>
+        <input type="checkbox" name="charactercount">Count the characters</input><br>
+        <input type="checkbox" name="wordcount">Count the words</input><br>
+        <button type="submit">Analyze Text</button>
+    </form>
+</body>
+</html>
